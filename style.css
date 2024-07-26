@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    backdrop-filter: blur(5px); 
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+    padding: 20px 50px;
+    font-family: 'Roboto', sans-serif; 
+}
+
+.navView {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.navView a {
+    text-decoration: none;
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 18px;
+    padding: 15px 20px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.navView a:hover {
+    color: #007bff; 
+}
+
+.logo {
+    width: 350px; 
+    height: auto;
+}
+
+.sliding-container {
+    position: relative;
+    overflow: hidden;
+    width: calc(100% - 500px);
+    margin: 0 20px;
+}
+
+.repeatHoriz {
+    display: inline-block;
+    white-space: nowrap;
+    animation: bounceHorizontal 10s infinite;
+}
+
+@keyframes bounceHorizontal {
+    0% {
+        transform: translateX(calc(90%));
+    }
+    50% {
+        transform: translateX(calc(0%));
+    }
+    100% {
+        transform: translateX(calc(115%));
+    }
+}
+
+.main {
+    background: linear-gradient(to bottom right, #f0f0f0, #ffffff);
+    border: 3px solid #007bff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 30px;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.main h3 {
+    color: black; 
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 35px;
+    transition: text-shadow 0.3s ease, font-size 0.3s ease; 
+}
+
+.main h3:hover {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-size: 1.2em;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.intButton {
+    background: linear-gradient(to bottom, #007bff, #0069d9);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 25px;
+}
+
+.intButton:hover {
+    background: linear-gradient(to bottom, #0069d9, #007bff);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+a {
+    color: black; 
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #004386; 
+}
+
+
+.days, .hours, .minutes, .seconds {
+    display: inline-block;
+    margin-right: 2px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 7px;
+    width: 200px;
+    height: 300px;
+    margin: 2px; 
+    text-align: center;
+
+    color: #000; 
+}
+
+.countdown-container {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 65px;
+    padding: 15px; 
+    border-radius: 15px; 
+    background-image: url(groupPic.jpg);
+    filter: brightness(90%) drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+    background-repeat: no-repeat;
+    background-size: cover;     
+    overflow: hidden; 
+}
+
+.countdown-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1; 
+}
+
+
+
+.countdown-container h1, .countdown-container h3 {
+    margin-top: 50px;
+    color: #007bff ; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+}
+
+
+
+.sponsor-container {
+    max-width: 1000px; 
+    margin: 60px auto; 
+    padding: 30px; 
+    border: 1px solid #ddd; 
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+    line-height: 50px;
+}
+  
+  .prev-sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; 
+    margin-top: 30px;
+  }
+  
+  .prev-sponsors img {
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+    transition: transform 0.3s ease-in-out; 
+  }
+  
+  .prev-sponsors img:hover {
+    transform: scale(1.1); 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+  }
